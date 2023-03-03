@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_apps/pages/page2.dart';
+import 'package:get_apps/route/page_name.dart';
 
 class PageSatu extends StatelessWidget {
   const PageSatu({super.key});
@@ -25,7 +25,7 @@ class PageSatu extends StatelessWidget {
                 )),
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('page-2');
+                  Get.toNamed(RouteName.page_2);
                 },
                 child: Text(
                   'Next Page >>',

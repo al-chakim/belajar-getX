@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_apps/pages/page1.dart';
+import 'package:get_apps/route/page_name.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('page-1');
+                  Get.toNamed(RouteName.page_1);
                 },
                 child: Text(
                   'Next Page >>',
