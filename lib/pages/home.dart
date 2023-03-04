@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_apps/pages/product.dart';
+import 'package:get_apps/routes/route_name.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -14,7 +15,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Get.to(Product());
+              Get.toNamed(RuteNama.Product);
             },
             child: Text(
               "All Product",

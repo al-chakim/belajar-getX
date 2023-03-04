@@ -11,7 +11,13 @@ class Detail extends StatelessWidget {
         title: Text('Detail ${Get.parameters['id']}'),
       ),
       body: Center(
-        child: Text('Product Name ${Get.parameters['name']}'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Product Name ${Get.parameters['name']}'),
+            Text('Product Name ${Get.parameters['ukuran']}'),
+          ],
+        ),
       ),
     );
   }

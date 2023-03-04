@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_apps/pages/detail.dart';
-import 'package:get_apps/pages/home.dart';
-import 'package:get_apps/pages/product.dart';
+import 'package:get_apps/routes/route_name.dart';
+import './routes/route_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,12 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/',
-      getPages: [
-        GetPage(name: '/', page: () => Home()),
-        GetPage(name: '/produk', page: () => Product()),
-        GetPage(name: '/detail/:id?', page: () => Detail()),
-      ],
+      initialRoute: RuteNama.home,
+      getPages: App.AppPages,
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_apps/routes/route_name.dart';
 
 class Product extends StatelessWidget {
   const Product({super.key});
@@ -16,7 +17,7 @@ class Product extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('/detail/1?name=Jaket');
+                  Get.toNamed(RuteNama.Product + '/1?name=Jaket&ukuran=XL');
                 },
                 child: Text(
                   "Product-1",
@@ -24,7 +25,8 @@ class Product extends StatelessWidget {
                 )),
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('/detail/2?name=Kaos Kaki');
+                  Get.toNamed(
+                      RuteNama.Product + '/2?name=Kaos Kaki&ukuran=Jumbo');
                 },
                 child: Text(
                   "Product-2",
@@ -32,7 +34,8 @@ class Product extends StatelessWidget {
                 )),
             ElevatedButton(
                 onPressed: () {
-                  Get.toNamed('/detail/3?name=Sendal Sepatu');
+                  Get.toNamed(
+                      RuteNama.Product + '/3?name=Sepatu Sendal&ukuran=45');
                 },
                 child: Text(
                   "Product-3",
