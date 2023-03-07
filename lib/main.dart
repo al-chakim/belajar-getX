@@ -20,10 +20,15 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('SnackBar'),
+      ),
       body: SafeArea(
-          child: ListView(
-        children: [],
+          child: Center(
+        child: Text(
+          'Coba SnackBar',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        ),
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -35,6 +40,7 @@ class Home extends StatelessWidget {
           // ScaffoldMessenger.of(context)
           //     .showSnackBar(SnackBar(content: Text('Hallo Everyone')));
         },
+        child: Icon(Icons.add),
       ),
     );
   }
