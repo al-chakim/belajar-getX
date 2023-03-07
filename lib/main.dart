@@ -21,25 +21,17 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SnackBar'),
+        title: Text('Dialog'),
       ),
       body: SafeArea(
           child: Center(
         child: Text(
-          'Coba SnackBar',
+          'Coba Dialog',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
       )),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Get.snackbar('Ini judulnya', 'Ini pesannya',
-              backgroundColor: Colors.blue[900],
-              colorText: Colors.white,
-              duration: Duration(seconds: 2),
-              animationDuration: Duration(milliseconds: 200));
-          // ScaffoldMessenger.of(context)
-          //     .showSnackBar(SnackBar(content: Text('Hallo Everyone')));
-        },
+        onPressed: () {},
         child: Icon(Icons.add),
       ),
     );
