@@ -32,6 +32,13 @@ class Home extends StatelessWidget {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          Get.dialog(
+            AlertDialog(
+              title: Text('Judul'),
+              content: Text('Isi pesan'),
+            ),
+          );
+
           // showDialog(
           //     context: context,
           //     builder: (context) {
@@ -41,40 +48,40 @@ class Home extends StatelessWidget {
           //       );
           //     });
 
-          Get.defaultDialog(
-            barrierDismissible: false,
-            title: 'Judul',
-            middleText: 'Isi Pesan/Deskripsi',
+          // Get.defaultDialog(
+          //   barrierDismissible: false,
+          //   title: 'Judul',
+          //   middleText: 'Isi Pesan/Deskripsi',
 
-            //default cancel
-            textCancel: 'batal',
-            cancelTextColor: Colors.red,
-            onCancel: () {},
+          //   //default cancel
+          //   textCancel: 'batal',
+          //   cancelTextColor: Colors.red,
+          //   onCancel: () {},
 
-            //custom cancel
-            cancel: ElevatedButton(
-              onPressed: () {
-                Get.back();
-              },
-              child: Text('Batal'),
-            ),
+          //   //custom cancel
+          //   cancel: ElevatedButton(
+          //     onPressed: () {
+          //       Get.back();
+          //     },
+          //     child: Text('Batal'),
+          //   ),
 
-            //default confirm
-            textConfirm: 'oke',
-            confirmTextColor: Colors.white,
-            onConfirm: () {},
+          //   //default confirm
+          //   textConfirm: 'oke',
+          //   confirmTextColor: Colors.white,
+          //   onConfirm: () {},
 
-            //custom confirm
-            confirm: ElevatedButton(onPressed: () {}, child: Text('oke')),
+          //   //custom confirm
+          //   confirm: ElevatedButton(onPressed: () {}, child: Text('oke')),
 
-            //custom button
-            actions: [
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Pilihan lain'),
-              ),
-            ],
-          );
+          //   //custom button
+          //   actions: [
+          //     ElevatedButton(
+          //       onPressed: () {},
+          //       child: Text('Pilihan lain'),
+          //     ),
+          //   ],
+          // );
         },
         child: Icon(Icons.add),
       ),
