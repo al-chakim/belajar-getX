@@ -31,7 +31,51 @@ class Home extends StatelessWidget {
         ),
       )),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // showDialog(
+          //     context: context,
+          //     builder: (context) {
+          //       return AlertDialog(
+          //         title: Text('Judul'),
+          //         content: Text('Isi pesan'),
+          //       );
+          //     });
+
+          Get.defaultDialog(
+            barrierDismissible: false,
+            title: 'Judul',
+            middleText: 'Isi Pesan/Deskripsi',
+
+            //default cancel
+            textCancel: 'batal',
+            cancelTextColor: Colors.red,
+            onCancel: () {},
+
+            //custom cancel
+            cancel: ElevatedButton(
+              onPressed: () {
+                Get.back();
+              },
+              child: Text('Batal'),
+            ),
+
+            //default confirm
+            textConfirm: 'oke',
+            confirmTextColor: Colors.white,
+            onConfirm: () {},
+
+            //custom confirm
+            confirm: ElevatedButton(onPressed: () {}, child: Text('oke')),
+
+            //custom button
+            actions: [
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Pilihan lain'),
+              ),
+            ],
+          );
+        },
         child: Icon(Icons.add),
       ),
     );
