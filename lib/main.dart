@@ -4,6 +4,11 @@ import 'package:get/get.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  final all = Get.lazyPut(
+    () => MyController(),
+    tag: 'tag-text',
+    fenix: true,
+  );
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -40,7 +45,11 @@ class Home extends StatelessWidget {
 }
 
 class Hitung extends StatelessWidget {
-  final countC = Get.put(MyController());
+  final countC = Get.put(
+    MyController(),
+    permanent: true,
+    tag: 'tag-count',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +96,16 @@ class Hitung extends StatelessWidget {
                       icon: Icon(Icons.add),
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                IconButton(
+                  onPressed: () {
+                    Get.to(() => Teks());
+                  },
+                  icon: Icon(Icons.navigate_next),
+                ),
               ],
             )
           ],
@@ -101,8 +119,36 @@ class Hitung extends StatelessWidget {
   }
 }
 
+class Teks extends StatelessWidget {
+  final t = Get.find<MyController>(tag: 'tag-text');
+  // final t = Get.put(
+  //   MyController(),
+  //   permanent: false,
+  //   tag: 'tag-text',
+  // );
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: TextField(
+            controller: t.textC,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class MyController extends GetxController {
   var count = 0.obs;
+
+  var textC = TextEditingController();
 
   void tambah() => count++;
   void kurang() => count--;
