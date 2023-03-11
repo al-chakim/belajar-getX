@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_apps/pages/product.dart';
-import 'package:get_apps/routes/route_name.dart';
+import 'package:get_apps/pages/shop.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -13,14 +12,18 @@ class Home extends StatelessWidget {
         title: Text('Home Page'),
       ),
       body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Get.toNamed(RuteNama.Product);
-            },
-            child: Text(
-              "All Product",
-              style: TextStyle(fontSize: 20),
-            )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Home Page'),
+            OutlinedButton(
+              onPressed: () {
+                Get.to(() => Shope());
+              },
+              child: Text('Shop >>'),
+            ),
+          ],
+        ),
       ),
     );
   }
