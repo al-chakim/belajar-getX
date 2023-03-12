@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_apps/controllers/count_c.dart';
-import 'package:get_apps/pages/count.dart';
+import 'package:get_apps/ui/pages/count.dart';
 import 'package:get_apps/routes/route_name.dart';
 
 class Home extends StatelessWidget {
