@@ -15,10 +15,10 @@ class Home extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Get.toNamed(RuteNama.Product);
+              Get.toNamed(RuteNama.coun);
             },
             child: Text(
-              "All Product",
+              "Let's Count",
               style: TextStyle(fontSize: 20),
             )),
       ),
