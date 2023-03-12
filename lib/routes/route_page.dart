@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:get_apps/bindings/count_b.dart';
 import 'package:get_apps/pages/count.dart';
 import 'package:get_apps/pages/detail.dart';
 import 'package:get_apps/pages/home.dart';
@@ -22,6 +23,7 @@ class App {
     GetPage(
       name: RuteNama.coun,
       page: () => Counting(),
+      binding: CountB(),
     ),
   ];
 }

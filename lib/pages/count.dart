@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_apps/controllers/count_c.dart';
-import 'package:get_apps/routes/route_page.dart';
 
 class Counting extends StatelessWidget {
-  final itung = Get.put(CounterController());
+  // final itung = Get.put(CounterController());
   // final totalItung = Get.create(() => CounterController(), tag: 'total');
+  final itung = Get.find<CounterController>();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class Counting extends StatelessWidget {
               ),
               child: Obx(
                 () => Text(
-                  ' Total Counter : ${itung.quantity}',
+                  ' Total Counter : ${itung.total}',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
