@@ -43,7 +43,7 @@ class Counting extends StatelessWidget {
                       children: [
                         Obx(
                           () => Text(
-                            ' Total Counter : ${itung.total}',
+                            'Total Counter : ${itung.total}',
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
