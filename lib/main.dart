@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_apps/pages/home.dart';
 
-void main() => runApp(MyApp());
+import './routes/app_pages.dart';
+import './pages/home_page.dart';
+
+import './controllers/usersC.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  final userC = Get.put(UsersC());
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Home(),
-      theme: ThemeData.dark(),
+      home: HomePage(),
+      getPages: AppPages.pages,
     );
   }
 }
